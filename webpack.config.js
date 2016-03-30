@@ -19,7 +19,7 @@ const options = {
         },
     },
     output: {
-        path: constants.paths.build,
+        path: constants.paths.build.client,
         filename: '[name].js'
     },
     module: {
@@ -40,7 +40,7 @@ if (TARGET === 'start' || !TARGET) {
     config = merge(options, {
         devtool: 'eval-source-map',
         devServer: {
-            contentBase: constants.paths.build,
+            contentBase: constants.paths.build.client,
 
             // Enable history API fallback so HTML5 History API based
             // routing works. This is a good default that will come
